@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ashtavinayak Automobile Industries dealership for BGauss electric scooters" />
+    <title>Ashtavinayak Automobile Industries Yavatmal</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a 65%, #f59e0b);
+        color: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .page-shell {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 18px;
+      }
+
+      .hero-card {
+        width: min(1100px, 100%);
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        background: rgba(15, 23, 42, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 25px 60px rgba(2, 6, 23, 0.35);
+        border-radius: 28px;
+        padding: 32px;
+        backdrop-filter: blur(12px);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .hero-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 30px 70px rgba(2, 6, 23, 0.4);
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        font-size: 0.8rem;
+        color: #fbbf24;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 3vw, 3rem);
+        margin: 0 0 12px;
+        line-height: 1.1;
+      }
+
+      .lead {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #dbeafe;
+        margin-bottom: 18px;
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .feature-pill {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(251, 191, 36, 0.15);
+        color: #fde68a;
+        border: 1px solid rgba(251, 191, 36, 0.25);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .highlight-card {
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(37, 211, 102, 0.18), rgba(15, 23, 42, 0.65));
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 18px;
+      }
+
+      .highlight-card p {
+        margin: 0;
+        line-height: 1.6;
+        color: #fef3c7;
+        font-weight: 600;
+      }
+
+      .highlight-card a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .highlight-card a:hover {
+        text-decoration: underline;
+      }
+
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #25d366, #128c7e);
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        box-shadow: 0 14px 28px rgba(37, 211, 102, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .secondary-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #f59e0b, #f97316);
+        color: #111827;
+        text-decoration: none;
+        font-weight: 700;
+        box-shadow: 0 14px 28px rgba(249, 115, 22, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .whatsapp-btn:hover,
+      .secondary-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .whatsapp-btn svg {
+        width: 22px;
+        height: 22px;
+        fill: currentColor;
+      }
+
+      .visual-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .image-gallery {
+        display: grid;
+        gap: 12px;
+      }
+
+      .image-card {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 12px 24px rgba(2, 6, 23, 0.24);
+        background: rgba(255,255,255,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .image-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 30px rgba(2, 6, 23, 0.3);
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        display: block;
+        background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(15,23,42,0.25));
+        padding: 10px;
+      }
+
+      .address-card {
+        padding: 18px 20px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #f59e0b, #f97316);
+        color: #111827;
+        box-shadow: 0 16px 30px rgba(249, 115, 22, 0.2);
+      }
+
+      .address-card h2 {
+        margin: 0 0 8px;
+        font-size: 1.15rem;
+      }
+
+      .address-card p {
+        margin: 0;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+
+      .site-footer {
+        text-align: center;
+        color: rgba(248, 250, 252, 0.9);
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        padding-top: 6px;
+      }
+
+      @media (max-width: 840px) {
+        .hero-card {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      document.getElementById('app').innerHTML = `
+        <main class="page-shell">
+          <section class="hero-card">
+            <div class="hero-copy">
+              <p class="eyebrow">Electric Mobility • Premium Dealership</p>
+              <h1>Welcome to Ashtavinayak Automobile Industries</h1>
+              <p class="lead">
+                We proudly bring you the future of travel with the BGauss electric scooter — stylish,
+                efficient, and built for modern city life.
+              </p>
+
+              <div class="hero-badges">
+                <span class="feature-pill">⚡ Smart city commuting</span>
+                <span class="feature-pill">🔋 Eco-friendly ride</span>
+                <span class="feature-pill">🚀 Premium style</span>
+              </div>
+
+              <div class="highlight-card">
+                <p>
+                  For more details on BGauss electric scooter visit official website
+                  <a href="https://www.bgauss.com/" target="_blank" rel="noopener noreferrer">www.bgauss.com</a>
+                </p>
+              </div>
+
+              <div class="cta-group">
+                <a
+                  class="whatsapp-btn"
+                  href="https://wa.me/918378973840?text=Hi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.5a9.5 9.5 0 0 0-8.17 14.31L2.5 21.5l5.2-1.3A9.5 9.5 0 1 0 12 2.5Zm0 17.3a7.8 7.8 0 0 1-3.95-1.08l-.28-.17-3.08.77.82-3L6.2 15.3A7.8 7.8 0 1 1 12 19.8Zm4.53-5.77c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.56.13-.17.26-.65.81-.8 1-.15.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.26-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.16-.26.25-.43.08-.17.04-.32-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.47c-.16 0-.42.06-.64.32-.22.26-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.61 4.14 3.56.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.09-.22-.15-.47-.28Z" />
+                  </svg>
+                  Call or WhatsApp
+                </a>
+
+                <a
+                  class="secondary-btn"
+                  href="https://wa.me/918378973840?text=Book%20Test%20Ride"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book Test Ride
+                </a>
+              </div>
+            </div>
+
+            <div class="visual-panel">
+              <div class="image-gallery">
+                <div class="image-card">
+                  <img src="assets/scooter-1.webp" alt="BGauss scooter front view" loading="eager" decoding="async" width="800" height="520" />
+                </div>
+                <div class="image-card">
+                  <img src="assets/scooter-2.webp" alt="BGauss scooter side view" loading="lazy" decoding="async" width="800" height="520" />
+                </div>
+                <div class="image-card">
+                  <img src="assets/scooter-3.webp" alt="BGauss scooter color variant" loading="lazy" decoding="async" width="800" height="520" />
+                </div>
+                <div class="image-card">
+                  <img src="assets/scooter-4.webp" alt="BGauss scooter showroom image" loading="lazy" decoding="async" width="800" height="520" />
+                </div>
+              </div>
+              <div class="address-card">
+                <h2>Visit our showroom</h2>
+                <h2>Ashtavinayak Automobile Industries</h2>
+                <p>Near Maruti Suzuki Showroom, Darwha road, Lohara, Yavatmal 445001</p>
+                <h2>Or Call:- 8378973810</h2>
+              </div>
+            </div>
+          </section>
+          <footer class="site-footer">Ashtavinayak Automobile © All rights reserved.</footer>
+        </main>
+      `;
+    </script>
+  </body>
+</html>

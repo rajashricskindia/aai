@@ -7,7 +7,7 @@
         <p class="lead">Smart Technology • Powerful Performance • Comfortable Ride • Zero Emissions</p>
 
         <div class="hero-ctas">
-          <a class="btn-primary" href="#contact">Book a Test Ride</a>
+          <a class="btn-primary" :href="whatsappHiLink" target="_blank" rel="noopener">Book a Test Ride</a>
           <a class="btn-ghost" href="#scooters">Explore Scooters</a>
         </div>
       </div>
@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+import { WHATSAPP_HI_LINK } from '../utils/whatsapp'
+const whatsappHiLink = WHATSAPP_HI_LINK
 </script>
 
 <style scoped>

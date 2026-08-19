@@ -6,7 +6,7 @@
         <p class="muted">Visit our showroom and experience a BGauss electric scooter for yourself.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn-primary" href="#contact">Book Your Test Ride</a>
+        <a class="btn-primary" :href="whatsappHiLink" target="_blank" rel="noopener">Book Your Test Ride</a>
         <a class="btn-ghost" href="tel:8378973840">Call 8378973840</a>
       </div>
     </div>
@@ -14,6 +14,8 @@
 </template>
 
 <script setup>
+import { WHATSAPP_HI_LINK } from '../utils/whatsapp'
+const whatsappHiLink = WHATSAPP_HI_LINK
 </script>
 
 <style scoped>

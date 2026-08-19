@@ -17,7 +17,7 @@
         <button class="btn-details" @click="expanded = !expanded">
           {{ expanded ? '▼ Hide Details' : '▶ View Details' }}
         </button>
-        <a class="btn-book" :href="bookLink" target="_blank">📞 Book Ride</a>
+        <a class="btn-book" :href="whatsappHiLink" target="_blank" rel="noopener">📞 Book Ride</a>
       </div>
 
       <transition name="expand">
@@ -40,10 +40,11 @@
 <script setup>
 import { defineProps } from 'vue'
 import { ref } from 'vue'
+import { WHATSAPP_HI_LINK } from '../utils/whatsapp'
 const props = defineProps({ scooter: Object })
 const expanded = ref(false)
 
-const bookLink = `https://wa.me/918378973840?text=${encodeURIComponent('I want to book a test ride for ' + (props.scooter?.name || 'a scooter'))}`
+const whatsappHiLink = WHATSAPP_HI_LINK
 </script>
 
 <style scoped>
@@ -66,7 +67,7 @@ const bookLink = `https://wa.me/918378973840?text=${encodeURIComponent('I want t
 .card-image-wrapper {
   position: relative;
   width: 100%;
-  height: 240px;
+  aspect-ratio: 4 / 3;
   background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
   display: flex;
   align-items: center;
@@ -78,7 +79,7 @@ const bookLink = `https://wa.me/918378973840?text=${encodeURIComponent('I want t
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 16px;
+  padding: 8px;
   transition: transform 0.3s ease;
 }
 
@@ -273,7 +274,7 @@ const bookLink = `https://wa.me/918378973840?text=${encodeURIComponent('I want t
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .card-image-wrapper {
-    height: 200px;
+    aspect-ratio: 1 / 1;
   }
   
   .bike-name {
@@ -300,7 +301,11 @@ const bookLink = `https://wa.me/918378973840?text=${encodeURIComponent('I want t
 
 @media (max-width: 540px) {
   .card-image-wrapper {
-    height: 180px;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .bike-image {
+    padding: 4px;
   }
   
   .bike-name {

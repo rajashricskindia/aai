@@ -3,10 +3,10 @@
     <div class="nav-inner container">
       <div class="brand" @click="scrollTop">
         <div class="logo-container">
-          <div class="logo">⚡</div>
+          <img src="/assets/bgauss-logo.png" alt="BGauss logo" class="logo-img" />
         </div>
         <div class="brand-text">
-          <div class="brand-name">अष्टविनायक Automobile</div>
+          <div class="brand-name">अष्टविनायक ऑटोमोबाईल</div>
           <small class="brand-tagline">BGauss Official Dealer</small>
         </div>
       </div>
@@ -21,7 +21,7 @@
       </div>
 
       <div style="display:flex;align-items:center;gap:12px">
-        <a class="cta" href="#contact">Book Test Ride</a>
+        <a class="cta" :href="whatsappHiLink" target="_blank" rel="noopener">Book Test Ride</a>
         <button class="hamburger" @click="open = !open" aria-label="menu">☰</button>
       </div>
     </div>
@@ -30,7 +30,9 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { WHATSAPP_HI_LINK } from '../utils/whatsapp'
 const open = ref(false)
+const whatsappHiLink = WHATSAPP_HI_LINK
 const isCompact = ref(false)
 
 function onScroll(){
@@ -64,18 +66,20 @@ onBeforeUnmount(()=>{ window.removeEventListener('scroll', onScroll) })
   width: 56px;
   height: 56px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  padding: 4px;
+  overflow: hidden;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: 900;
-  color: white;
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -124,9 +128,6 @@ onBeforeUnmount(()=>{ window.removeEventListener('scroll', onScroll) })
     width: 48px;
     height: 48px;
   }
-  .logo {
-    font-size: 24px;
-  }
   .brand-name {
     font-size: 15px;
   }
@@ -139,9 +140,6 @@ onBeforeUnmount(()=>{ window.removeEventListener('scroll', onScroll) })
   .logo-container {
     width: 44px;
     height: 44px;
-  }
-  .logo {
-    font-size: 20px;
   }
   .brand-name {
     font-size: 14px;
